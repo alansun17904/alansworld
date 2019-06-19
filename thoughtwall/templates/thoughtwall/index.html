@@ -1,0 +1,62 @@
+{% extends "../struct.html" %}
+{% load static %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/css/index.css' %}" />
+{% endblock %}
+
+{% block pageheader %}
+    <img id="front" src="{% static 'img/profile.JPG' %}" alt="profile picture of Alan" />
+    <h1 class="masting">Hi! I'm Alan ☀️. Welcome to my personal website.</h1>
+{% endblock %}
+
+{% block content %}
+    <section id="questions">
+        <h2>
+            <blockquote>
+                "No one is dumb who is curious.
+                The people who don't ask questions remain clueless
+                throughout their lives." - Neil deGrasse Tyson
+            </blockquote>
+        </h2>
+        <aisde>
+            <ul id="filter-column" class="nav justify-content-center">
+                <li class="nav-item">
+                    <input type="checkbox" id="selectall" name="selectall" />
+                    <label for="selectall" checked="checked">Select All Tags</label>
+                </li>
+                {% for tag in tags %}
+                    <li class="filter nav-item">
+                        <input type="checkbox" id="{{ tag.name }}" name="{{ tag.name }}" />
+                        <label for="{{ tag.name }}" checked="checked">{{ tag.name }}</label>
+                    </li>
+                {% endfor %}
+            </ul>
+        </aisde>
+        <div id="thought-wall" class="container row">
+            {% if questions %}
+                {% for question in questions %}
+                    <div class="thought col-lg-4 col-12 col-sm-6">
+                        <h4 class="content">
+                            {{ question.question_text }}
+                        </h4>
+                        {% if question.answer_text %}
+                            <p class="answer">{{ question.answer_text }}</p>
+                        {% endif %}
+                        <div class="tags-wrapper">
+                            {% for tag in question.get_tags %}
+                                <span class="tag {{ tag.name }}">{{ tag.name }}</span>
+                            {% endfor %}
+                        </div>
+                        <time>{{ question.published_date.year }} / {{ question.published_date.month }} / {{ question.published_date.day }}</time>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h5 class="no-thoughts">Alan's 🧠 is empty...temporarily...</h5>
+            {% endif %}
+            <h5 id="nonselected" class="no-thoughts" style="display: none;">Nothing is here because all 🏷s are deselected 😫.</h5>
+        </div>
+    </section>
+    <script src="{% static 'js/jquery-3.4.1.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/thoughtwall_filter.js' %}" type="text/javascript"></script>
+{% endblock %}
