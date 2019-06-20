@@ -19,4 +19,5 @@ from django.urls import include, path
 urlpatterns = [
     path('', include('thoughtwall.urls')),
     path('admin/', admin.site.urls),
-] 
+    path('archives/', include('archives.urls')),
+]
