@@ -1,4 +1,13 @@
 {% extends "../struct.html" %}
 {% load static %}
 
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/css/index.css' %}" />
+{% endblock %}
 {% block title %}Alan's Archives{% endblock %}
+
+{% block pageheader %}
+    <img id="front" src="{% static 'img/lotsofboxes.jpg' %}" />
+    <h1 class="masting">Archives 📦</h1>
+    <h3 class="masting">notes, notes, and more notes...</h3>
+{% endblock %}

@@ -26,7 +26,7 @@ SECRET_KEY = 'ym3)s-c*^dnf+=f7&vt6s&@6*-y3*&m-*6tac$fc1k%ri!x01y'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'django-env.epq73dwefu.us-west-2.elasticbeanstalk.com',
+    'alansworld-env.epq73dwefu.us-west-2.elasticbeanstalk.com',
     '127.0.0.1',
 ]
 
