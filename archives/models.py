@@ -28,4 +28,8 @@ class PsychologyStudy(models.Model):
 
     def __str__(self):
         return f'{self.experimenters} ({str(self.year)})'
+
+
+class PsychologyQuestion(models.Model):
+    question = models.CharField(max_length=300)
     

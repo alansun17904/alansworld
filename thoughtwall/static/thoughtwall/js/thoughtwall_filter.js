@@ -18,11 +18,9 @@
             for (tag of $(".thought").find("span")) {
                 console.log(tag.textContent)
                 if (tag.textContent == tagName) {
-                    console.log("HIIII")
                     tag.parentNode.parentNode.style["display"] = this.checked ? "block": "none";
                 }
             }
         })
     }
-    $("#selectall").checked = true;
 })()

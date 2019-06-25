@@ -2,12 +2,25 @@
 {% load static %}
 
 {% block stylesheet %}
-    <link rel="stylesheet" type="text/css" href="{% static 'styles/css/index.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'archives/styles/css/index.css' %}" />
 {% endblock %}
 {% block title %}Alan's Archives{% endblock %}
 
 {% block pageheader %}
-    <img id="front" src="{% static 'img/lotsofboxes.jpg' %}" />
+    <img id="front" src="{% static 'archives/img/lotsofboxes.jpg' %}" />
     <h1 class="masting">Archives 📦</h1>
-    <h3 class="masting">notes, notes, and more notes...</h3>
+{% endblock %}
+
+{% block content %}
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link" href="psychology">Psychology</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Economics</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Mathematics</a>
+        </li>
+    </ul>
 {% endblock %}

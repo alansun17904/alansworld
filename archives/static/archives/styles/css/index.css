@@ -1,0 +1,84 @@
+@charset "UTF-8";
+body ul {
+  align-content: right; }
+body .masting {
+  text-align: center;
+  padding-top: 1em; }
+body #front {
+  padding-top: 2em;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 35%; }
+body main {
+  width: 90%;
+  margin: auto;
+  padding: 1em; }
+  body main blockquote {
+    font-size: 0.7em;
+    font-weight: 500;
+    line-height: 1; }
+
+#thought-wall {
+  margin-top: 2em;
+  text-align: center; }
+
+div.thought {
+  display: inline;
+  color: #636363;
+  margin-bottom: 1em;
+  padding-left: 0;
+  padding-right: 0; }
+  div.thought .content {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 450; }
+  div.thought p.answer {
+    color: #5e7fff;
+    margin: 0; }
+  div.thought span.tag {
+    background-color: #007bff;
+    padding: 3px;
+    margin: 4px;
+    color: white;
+    border-radius: 4px; }
+  div.thought time {
+    color: #999999; }
+
+aside ul li {
+  display: block;
+  padding: 0.5em; }
+
+footer {
+  padding: 0;
+  background-color: #d3e4ff;
+  text-align: center; }
+  footer h6 {
+    margin: 0; }
+  footer img {
+    width: 20px; }
+
+/* Media Queries */
+@media only screen and (min-width: 1000px) {
+  body main {
+    margin: auto;
+    max-width: 1000px; } }
+@media screen and (max-width: 630px) {
+  #myname-bg {
+    display: none; }
+
+  #myname-sm:after {
+    content: "💥 Alan Sun"; }
+
+  h1.masting {
+    font-size: 28px; }
+
+  body #front {
+    padding-top: 1em;
+    width: 50%;
+    margin: auto; }
+
+  main blockquote {
+    font-size: 1em; } }
+
+/*# sourceMappingURL=index.css.map */
