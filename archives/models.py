@@ -1,15 +1,16 @@
 from django.db import models
 
 
+BIOLOGICAL = 'BIO'
+COGNITIVE = 'COG'
+SOCIAL = 'SC'
+STUDY_CATEGORIES = [
+    (BIOLOGICAL, 'Biological'),
+    (COGNITIVE, 'Cognitive'),
+    (SOCIAL, 'Social Cultural'),
+]
+
 class PsychologyStudy(models.Model):
-    BIOLOGICAL = 'BIO'
-    COGNITIVE = 'COG'
-    SOCIAL = 'SC'
-    STUDY_CATEGORIES = [
-        (BIOLOGICAL, 'Biological'),
-        (COGNITIVE, 'Cognitive'),
-        (SOCIAL, 'Social Cultural'),
-    ]
     category = models.CharField(
         max_length=3,
         choices=STUDY_CATEGORIES,
@@ -24,12 +25,16 @@ class PsychologyStudy(models.Model):
     results = models.TextField()
     conclusion = models.TextField()
     evaluation = models.TextField()
-    validquestions = models.TextField(null=True)
 
     def __str__(self):
         return f'{self.experimenters} ({str(self.year)})'
 
 
 class PsychologyQuestion(models.Model):
+    category = models.CharField(
+        max_length=3, 
+        choices=STUDY_CATEGORIES,
+        default=BIOLOGICAL
+    )
     question = models.CharField(max_length=300)
-    
+    valid_studies = models.ManyToManyField(PsychologyStudy)
