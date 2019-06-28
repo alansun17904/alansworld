@@ -1,1 +1,25 @@
 {% extends "thoughtwall/struct.html" %}
+{% load static %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{% static 'thoughtwall/styles/css/index.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'thoughtwall/styles/css/about.css' %}" />
+{% endblock %}
+
+{% block title %}
+    <title>About Alan</title>
+{% endblock %}
+
+
+{% block favicon %}
+    <link rel="icon" type="image/png" size="192x192" href="{% static 'thoughtwall/img/sun.png' %}" />
+{% endblock %}
+
+{% block pageheader %}
+    <h3>Me</h3>
+    <hr />
+
+{% endblock %}
+
+{% block content %}
+{% endblock %}

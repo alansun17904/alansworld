@@ -24,10 +24,10 @@ PROJECT_DIR = os.path.dirname(__file__)
 SECRET_KEY = 'ym3)s-c*^dnf+=f7&vt6s&@6*-y3*&m-*6tac$fc1k%ri!x01y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'alansworld-env.epq73dwefu.us-west-2.elasticbeanstalk.com',
+    'djangosucks.vvmpa2zhtg.us-west-2.elasticbeanstalk.com',
     '127.0.0.1',
 ]
 
@@ -35,14 +35,14 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'thoughtwall.apps.ThoughtwallConfig',
-    'archives.apps.ArchivesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'thoughtwall.apps.ThoughtwallConfig',
+    'archives.apps.ArchivesConfig',
 ]
 
 MIDDLEWARE = [
