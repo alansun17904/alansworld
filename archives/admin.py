@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import PsychologyQuestion, PsychologyStudy
+from archives.model import PsychologyQuestion, PsychologyStudy
 
 
 class StudyAdmin(admin.ModelAdmin):
@@ -8,5 +8,6 @@ class StudyAdmin(admin.ModelAdmin):
     search_fields = ('aim', 'method', 'procedure', 'participants', 'results', 'conclusion', 'evaluation')
 
 
-admin.site.register(PsychologyStudy, StudyAdmin)
+# admin.site.register(PsychologyStudy, StudyAdmin)
+admin.site.register(PsychologyStudy)
 admin.site.register(PsychologyQuestion)

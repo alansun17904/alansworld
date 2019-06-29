@@ -5,6 +5,10 @@
 <link rel="stylesheet" type="text/css" href="{% static 'thoughtwall/styles/css/index.css' %}" />
 {% endblock %}
 
+{% block favicon %}
+<link rel="icon" type="image/png" size="192x192" href="{% static 'thoughtwall/img/android-chrome-192x192.png' %}" />
+{% endblock %}
+
 {% block pageheader %}
     <img id="front" src="{% static 'thoughtwall/img/profile.JPG' %}" alt="profile picture of Alan" />
     <h1 class="masting">Hi! I'm Alan ☀️. Welcome to my personal website.</h1>
