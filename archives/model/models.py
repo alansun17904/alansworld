@@ -26,6 +26,7 @@ class PsychologyStudy(models.Model):
     conclusion = models.TextField()
     evaluation = models.TextField()
 
+
     def __str__(self):
         return f'{self.experimenters} ({str(self.year)})'
 

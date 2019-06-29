@@ -28,7 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'djangodjango.x3immna2mm.us-west-2.elasticbeanstalk.com',
-    '127.0.0.1',
+    '127.0.0.1'
 ]
 
 
