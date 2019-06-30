@@ -27,15 +27,9 @@ SECRET_KEY = 'ym3)s-c*^dnf+=f7&vt6s&@6*-y3*&m-*6tac$fc1k%ri!x01y'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-<<<<<<< HEAD
     'djangodjango.x3immna2mm.us-west-2.elasticbeanstalk.com',
     '127.0.0.1'
-=======
-    'djangosucks.vvmpa2zhtg.us-west-2.elasticbeanstalk.com',
-    '127.0.0.1',
->>>>>>> 10e2196d38e78c891bdbc0884dcee8fa05497d25
 ]
-
 
 # Application definition
 

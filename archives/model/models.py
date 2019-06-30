@@ -25,6 +25,7 @@ class PsychologyStudy(models.Model):
     results = models.TextField()
     conclusion = models.TextField()
     evaluation = models.TextField()
+    # slug = models.SlugField(max_length=250, unique_for_date=('experimenters', 'year', 'category'), default='')
 
 
     def __str__(self):

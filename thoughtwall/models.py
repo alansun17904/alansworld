@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class Tag(models.Model):
     name = models.CharField(max_length=100, unique=True)
 
@@ -13,6 +13,9 @@ class Question(models.Model):
     answer_text = models.TextField(blank=True, default="Still searching for an answer...")
     published_date = models.DateTimeField()
     tags = models.ManyToManyField(Tag)
+
+    class Meta:
+        ordering = ('-published_date',)
 
     def get_tags(self):
         return self.tags.all()
