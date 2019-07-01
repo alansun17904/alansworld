@@ -15,7 +15,7 @@ class Question(models.Model):
     tags = models.ManyToManyField(Tag)
 
     class Meta:
-        ordering = ('-published_date',)
+        ordering = ('published_date',)
 
     def get_tags(self):
         return self.tags.all()
