@@ -1,1 +1,0 @@
-web: gunicorn alansworld.wsgi --log-file -
